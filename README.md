@@ -33,7 +33,7 @@ $ mvn package
    * В ОС Mac OS X - `Library/Application Support/eTeks/Sweet Home 3D/plugins of your user folder`,
    * В Linux и других Unix-ах - `.eteks/sweethome3d/plugins` в папке пользователя.
 
-Командная строка в Linux - дело привычное: запускаете эмулятор терминала, переходите в директорий проекта (`cd ~/IdeaProjects/oberon`). В Windows все аналогично, только запускать надо `cmd.exe` или `far.exe` (если он был установлен: https://www.farmanager.com/download.php).
+Командная строка в Linux - дело привычное: запускаете эмулятор терминала, переходите в директорий проекта (`cd ~/IdeaProjects/SH3Dhello`). В Windows все аналогично, только запускать надо `cmd.exe` или `far.exe` (если он был установлен: https://www.farmanager.com/download.php).
 
 Программа `mvn` предназначена для сборки проекта.  Ее установка зависит от операционной системы.  Адрес - https://maven.apache.org/download.cgi . Для обеспечения ее функционирования и запуска данного проекта необходимо установить Java версии 1.8 или раньше (больше).
 
