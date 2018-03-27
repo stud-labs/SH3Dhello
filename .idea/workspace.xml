@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="831c93d6-642a-4562-816a-af36046655c2" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -31,8 +29,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="27">
-                <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+              <first_editor relative-caret-position="0">
+                <caret line="0" column="38" lean-forward="true" selection-start-line="0" selection-start-column="2" selection-end-line="0" selection-end-column="38" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -349,6 +347,14 @@
       <option name="presentableId" value="Default" />
       <updated>1522148373638</updated>
     </task>
+    <task id="LOCAL-00001" summary="Added README instruction on installation (in Russian).">
+      <created>1522165601559</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1522165601559</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -417,6 +423,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added README instruction on installation (in Russian)." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added README instruction on installation (in Russian)." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -496,8 +506,8 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="27">
-            <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="38" lean-forward="true" selection-start-line="0" selection-start-column="2" selection-end-line="0" selection-end-column="38" />
             <folding />
           </first_editor>
           <second_editor />
