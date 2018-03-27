@@ -1,7 +1,10 @@
-# Java-oberon-compiler
-Compiler for Oberon programming language implemented with Java, Antlr4, LLVM. A project showing students that writing compilers is fun.
+# Плагин Hello World для Sweet Home 3D  
+
+Пример плагина для Sweet Home 3D (http://www.sweethome3d.com/pluginDeveloperGuide.jsp).
 
 ## Установка программного обеспечения
+
+Дальнейшие действия предполагают, что в системе Linux установлена среда разработки JetBrains IntelliJ IDEA.
 
 ## Клонирование данного проекта
 
@@ -10,8 +13,8 @@ Compiler for Oberon programming language implemented with Java, Antlr4, LLVM. A 
 ```shell
 $ mkdir -p ~/IdeaProjects
 $ cd ~/IdeaProjects
-$ git clone https://github.com/eugeneai/Java-oberon-compiler.git oberon
-$ cd oberon
+$ git clone SH3Dhello
+$ cd SH3Dhello
 ```
 Первые две строки не относятся к клонированию, они оснащают среду.
 
@@ -20,8 +23,15 @@ $ cd oberon
 Для того, чтобы скомпилировать проект надо из командной строки запустить команду сборки.
 
 ```shell
-$ mvn package exec:java
+$ mvn package
 ```
+
+Далее результат (`test-sweethome3d-plugin-0.0-SNAPSHOT.jar`) в папке `target` копируется 
+
+   * в ОС Windows Vista / 7 / 8 / 10 в папку `C:\Users\<user>\AppData\Roaming\eTeks\Sweet Home 3D\plugins`,
+   * В ОС Windows XP и раньше - `C:\Documents and Settings\user\Application Data\eTeks\Sweet Home 3D\plugins`,
+   * В ОС Mac OS X - `Library/Application Support/eTeks/Sweet Home 3D/plugins of your user folder`,
+   * В Linux и других Unix-ах - `.eteks/sweethome3d/plugins` в папке пользователя.
 
 Командная строка в Linux - дело привычное: запускаете эмулятор терминала, переходите в директорий проекта (`cd ~/IdeaProjects/oberon`). В Windows все аналогично, только запускать надо `cmd.exe` или `far.exe` (если он был установлен: https://www.farmanager.com/download.php).
 
@@ -30,9 +40,6 @@ $ mvn package exec:java
 Если компиляция и запуск завершились удачно, то на экране появится текст, вроде этого:
 
 ```text
-code generation does not match the current runtime version 4.7.1
-; Running fac(10) with JIT...
-; Result: 3628800
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
