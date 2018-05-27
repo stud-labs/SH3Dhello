@@ -35,3 +35,4 @@ public class VolumeAction extends PluginAction {
         JOptionPane.showMessageDialog(null, message);
     }
 }
+
