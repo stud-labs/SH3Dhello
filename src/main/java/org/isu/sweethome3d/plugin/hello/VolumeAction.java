@@ -5,7 +5,7 @@ import com.eteks.sweethome3d.model.PieceOfFurniture;
 import com.eteks.sweethome3d.plugin.PluginAction;
 
 import javax.swing.*;
-
+/* Внутренний класс VolumePlugin*/
 public class VolumeAction extends PluginAction {
     private Home home;
     public VolumeAction(Home home) {

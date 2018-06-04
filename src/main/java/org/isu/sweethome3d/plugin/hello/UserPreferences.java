@@ -16,14 +16,14 @@ public abstract class UserPreferences
     /*Деталь метода*/
 
     // Возвращает каталог текстур.
-    public TexturesCatalog getTexturesCatalog() {
+    /*public TexturesCatalog getTexturesCatalog() {
         return null;
     }
 
     //Устанавливает каталог текстур.
     protected void setTexturesCatalog(TexturesCatalog catalog) {
 
-    }
+    }*/
 
     /*Устанавливает, должны ли полы помещений быть выделены цветом или текстурой, и уведомляет слушателей об этом изменении.
         Параметры:

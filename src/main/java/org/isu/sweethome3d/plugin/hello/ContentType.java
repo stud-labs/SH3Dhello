@@ -6,7 +6,7 @@ package org.isu.sweethome3d.plugin.hello;
 
 /*надо ли константы объявлять?*/
 /*Enum Constant Detail*/
-public static final ContentManager.ContentType SWEET_HOME_3D;
+/*public static final ContentManager.ContentType SWEET_HOME_3D;
 
 public static final ContentManager.ContentType MODEL;
 
@@ -36,10 +36,10 @@ public static final ContentManager.ContentType PLUGIN;
 
 public static final ContentManager.ContentType PHOTOS_DIRECTORY;
 
-public static final ContentManager.ContentType USER_DEFINED;
+public static final ContentManager.ContentType USER_DEFINED;*/
 
-public static enum ContentType
-        extends java.lang.Enum<ContentManager.ContentType>{
+public/* static */enum ContentType
+       /* extends java.lang.Enum<ContentManager.ContentType>*/{
     /*Method Detail*/
 
     /*Возвращает массив, содержащий константы этого типа перечисления, в том порядке, в котором они объявлены.
@@ -48,7 +48,7 @@ public static enum ContentType
             System.out.println (с);
         Возвращает:
             массив, содержащий константы этого типа перечисления, в том порядке, в котором они объявлены*/
-    public static ContentManager.ContentType[] values() {
+   /* public static ContentManager.ContentType[] values() {
         return new ContentType[0];
     }
 
@@ -60,9 +60,9 @@ public static enum ContentType
         Возвращает:
             константа перечисления с указанным именем
         Броски:
-            java.lang.IllegalArgumentException - если этот тип перечисления не имеет константы с указанным именем
-            java.lang.NullPointerException - если аргумент равен нулю*/
-    public static ContentManager.ContentType valueOf(java.lang.String name) {
+        java.lang.IllegalArgumentException - если этот тип перечисления не имеет константы с указанным именем
+        java.lang.NullPointerException - если аргумент равен нулю*/
+   /* public static ContentManager.ContentType valueOf(java.lang.String name) {
         return null;
-    }
+    }*/
 }

@@ -4,11 +4,11 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.isu.sweethome3d.plugin.hello</groupId>
-    <artifactId>test-sweethome3d-plugin</artifactId>
-    <version>0.0-SNAPSHOT</version>
+    <groupId>org.isu.sweethome3d.plugin.wpft</groupId>
+    <artifactId>wp-and-ft-sweethome3d-plugin</artifactId>
+    <version>0.2-SNAPSHOT</version>
     <packaging>jar</packaging>
-    <name>A Sweet Home 3D Test Plugin</name>
+    <name>A Sweet Home 3D Wall Paper and Floor Tiles Plugin</name>
 
     <parent>
         <groupId>com.massisframework</groupId>
@@ -23,6 +23,20 @@
             <version>4.11</version>
             <scope>test</scope>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-entitymanager -->
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-entitymanager</artifactId>
+            <version>5.3.1.Final</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>42.2.2</version>
+        </dependency>
+
         <!-- https://mvnrepository.com/artifact/com.massisframework/sweethome3d -->
         <!--
         <dependency>

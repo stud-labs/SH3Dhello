@@ -5,10 +5,10 @@ package org.isu.sweethome3d.plugin.hello;
  */
 /*надо ли константы объявлять?*/
 /*Enum Constant Detail*/
-public static final TextureChoiceController.Property TEXTURE;
+/*public static final TextureChoiceController.Property TEXTURE;*/
 
-public static enum Property
-        extends java.lang.Enum<TextureChoiceController.Property>{
+public /*static*/ enum Property
+        /*extends java.lang.Enum<TextureChoiceController.Property>*/{
 
     /*Method Detail*/
     /*Возвращает массив, содержащий константы этого типа перечисления, в том порядке, в котором они объявлены.
@@ -17,7 +17,7 @@ public static enum Property
             System.out.println (с);
         Возвращает:
             массив, содержащий константы этого типа перечисления, в том порядке, в котором они объявлены*/
-    public static TextureChoiceController.Property[] values() {
+    /*public static TextureChoiceController.Property[] values() {
         return new TextureChoiceController.Property[0];
     }
 
@@ -29,8 +29,8 @@ public static enum Property
         Броски:
             java.lang.IllegalArgumentException - если этот тип перечисления не имеет константы с указанным именем
             java.lang.NullPointerException - если аргумент равен нулю*/
-    public static TextureChoiceController.Property valueOf(java.lang.String name) {
+   /* public static TextureChoiceController.Property valueOf(java.lang.String name) {
         return null;
     }
-
+*/
 }
