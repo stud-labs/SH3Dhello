@@ -1,11 +1,11 @@
-package org.isu.sweethome3d.plugin.hello;
+package org.isu.sweethome3d.plugin.wpft;
 
 import com.eteks.sweethome3d.model.Home;
 import com.eteks.sweethome3d.model.PieceOfFurniture;
 import com.eteks.sweethome3d.plugin.PluginAction;
 
 import javax.swing.*;
-
+/* Внутренний класс VolumePlugin*/
 public class VolumeAction extends PluginAction {
     private Home home;
     public VolumeAction(Home home) {
@@ -35,3 +35,4 @@ public class VolumeAction extends PluginAction {
         JOptionPane.showMessageDialog(null, message);
     }
 }
+
