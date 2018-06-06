@@ -16,6 +16,11 @@ public class WallAction extends PluginAction {
         setEnabled(true);
         this.home = home;
     }
+/*
+    public WallParamsDialog []{
+            return textHeight
+    }*/
+
     @Override
     public void execute() {
         // Display the result in a message box (\u00b3 is for 3 in supercript)
