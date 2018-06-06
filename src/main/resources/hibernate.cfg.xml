@@ -23,6 +23,10 @@
 
         <!-- Annotated entity classes -->
         <mapping class="org.isu.sweethome3d.plugin.wpft.WallPaper"/>
+        <mapping class="org.isu.sweethome3d.plugin.wpft.Files"/>
+        <mapping class="org.isu.sweethome3d.plugin.wpft.Article"/>
+        <mapping class="org.isu.sweethome3d.plugin.wpft.Producer"/>
+        <mapping class="org.isu.sweethome3d.plugin.wpft.Collection"/>
 
     </session-factory>
 </hibernate-configuration>
