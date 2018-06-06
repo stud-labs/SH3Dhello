@@ -6,30 +6,14 @@ package org.isu.sweethome3d.plugin.wpft;
 
         import java.io.Serializable;
 
-        import javax.persistence.Entity;
-        import javax.persistence.GeneratedValue;
-        import javax.persistence.GenerationType;
-        import javax.persistence.Id;
+        import javax.persistence.*;
 
 @Entity
 public class WallPaper implements Serializable {
 
-    public WallPaper() {
-        this.login = "test";
-    };
-
-    /*
-    public WallPaper(String login) {
-        this.login = login;
-
-    };
-    */
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-    private String login;
 
     public Long getId() {
         return id;
@@ -39,11 +23,10 @@ public class WallPaper implements Serializable {
         this.id = id;
     }
 
-    public String getLogin() {
-        return login;
-    }
+    @ManyToOne
+    private Article article;
 
-    public void setLogin(String login) {
-        this.login = login;
-    }
+    @ManyToOne
+    private Files files;
+
 }
