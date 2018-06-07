@@ -51,7 +51,7 @@ public class WallAction extends PluginAction {
         dialog.setContentPane(wpd.getPanel());
         dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
         dialog.pack();
-        dialog.setSize(600, 600);
+        dialog.setSize(500, 400);
         dialog.setVisible(true);
     }
 }
