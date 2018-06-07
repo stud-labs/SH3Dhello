@@ -20,6 +20,7 @@ public class WallPaperAction extends PluginAction {
     @Override
     public void execute() {
         // Display the result in a message box (\u00b3 is for 3 in supercript)
+        TextureDialog.execute();
         java.util.Collection<Wall> walls =  home.getWalls();
         for (Wall w : walls) {
             w.setHeight(new Float(290.0));

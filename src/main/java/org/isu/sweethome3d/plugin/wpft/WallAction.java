@@ -26,24 +26,32 @@ public class WallAction extends PluginAction {
         // Display the result in a message box (\u00b3 is for 3 in supercript)
         java.util.Collection<Wall> walls =  home.getWalls();
 
-        Float height = new Float(290.0);
         inputDialog();
-
-        for (Wall w : walls) {
-            w.setHeight(height);
+        String message;
+        if (height!=null) {
+            for (Wall w : walls) {
+                w.setHeight(height);
+            }
+            message = String.format(
+                    "Set all walls to: %f",  height.floatValue());
+        } else {
+            message = String.format("Setting cancelled");
         }
-        String message = String.format(
-                "Set all walls to: %f",  height.floatValue());
         JOptionPane.showMessageDialog(null, message);
     }
+
+    public JDialog dialog;
+    public Float height;
+
     public void inputDialog()
     {
-        JDialog dialog = new JDialog();
+        dialog = new JDialog();
         WallParamsDialog wpd = new WallParamsDialog();
+        wpd.setContext(this);
         dialog.setContentPane(wpd.getPanel());
-        dialog.setDefaultCloseOperation(JDialog.EXIT_ON_CLOSE);
+        dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
         dialog.pack();
-        dialog.setSize(300, 150);
+        dialog.setSize(600, 600);
         dialog.setVisible(true);
     }
 }
