@@ -40,19 +40,13 @@ public class WallAction extends PluginAction {
         JOptionPane.showMessageDialog(null, message);
     }
 
-    public JDialog dialog;
+    public WallParamsDialog dialog;
     public Float height;
 
     public void inputDialog()
     {
-        dialog = new JDialog();
-        WallParamsDialog wpd = new WallParamsDialog();
-        wpd.setContext(this);
-        dialog.setContentPane(wpd.getPanel());
-        dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
-        dialog.pack();
-        dialog.setSize(500, 400);
-        dialog.setVisible(true);
+
+        dialog = WallParamsDialog.execute(this);
     }
 }
 
