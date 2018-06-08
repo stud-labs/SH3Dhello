@@ -15,6 +15,8 @@ public class WallPaper implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    private Long volume;
+
     public Long getId() {
         return id;
     }

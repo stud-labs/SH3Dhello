@@ -21,9 +21,6 @@ public class WallAction extends PluginAction {
             return textHeight
     }*/
 
-    @Override
-
-
     public WallParamsDialog dialog;
     public Float height;
 
@@ -31,6 +28,11 @@ public class WallAction extends PluginAction {
     {
 
         dialog = WallParamsDialog.execute(this);
+    }
+
+    @Override
+    public void execute() {
+
     }
 }
 
