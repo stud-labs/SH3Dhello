@@ -2,6 +2,7 @@ package org.isu.sweethome3d.plugin.wpft;
 
 import org.hibernate.Session;
 import org.hibernate.query.Query;
+import org.imgscalr.Scalr;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
@@ -9,6 +10,7 @@ import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 import java.awt.*;
 import java.awt.event.*;
+import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
@@ -96,28 +98,37 @@ public class TextureDialog extends JDialog {
         if (art != null && selected != art) {
             System.out.println("Selected: " + art);
             onArticleSelected(art);
-        } else {
+        }
+        if (art==null) {
             onArticleDeSelected();
         }
         selected = art;
     }
 
     private void onArticleSelected(Article art) {
-        Image image = null;
         String url = art.toURL(WallPaperPlugin.BASE_URL);
         try {
             URL url_ = new URL(url);
             image = ImageIO.read(url_);
-            ImageIcon icon = new ImageIcon(image);
+            iconImage = Scalr.resize(image, 200);
+            ImageIcon icon = new ImageIcon(iconImage);
             imageTexture.setIcon(icon);
         } catch (IOException e) {
             System.err.println("We could not load image from " + url);
-            return;
+            onArticleDeSelected();
         }
     }
 
+    public BufferedImage image = null;
+    public BufferedImage iconImage = null;
+    public BufferedImage wallImage = null;
+
     private void onArticleDeSelected() {
         // remove preview.
+        image = null;
+        iconImage = null;
+        wallImage = null;
+        imageTexture.setIcon(null);
     }
 
     private DefaultListModel<Article> listModel = new DefaultListModel<>();

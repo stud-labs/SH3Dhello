@@ -25,10 +25,6 @@ public class WallPaperAction extends PluginAction {
         for (Wall w : walls) {
             w.setHeight(new Float(290.0));
         }
-        String message = String.format(
-                "WalPaper !! Success walls no: %d", walls.size());
-        JOptionPane.showMessageDialog(null, message);
     }
-
 }
 
