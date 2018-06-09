@@ -12,7 +12,6 @@ import java.awt.event.*;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
-import java.util.Arrays;
 
 import static org.apache.commons.io.FileUtils.listFiles;
 
@@ -22,7 +21,7 @@ public class TextureDialog extends JDialog {
     private JButton buttonCancel;
     private JComboBox comboBoxSearch;
     private JList listTexture;
-    private JLabel ImageTexture;
+    private JLabel imageTexture;
     private JTextField textQuery;
     public JButton loadTexturesButton;
 
@@ -61,14 +60,6 @@ public class TextureDialog extends JDialog {
             }
         }, KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0), JComponent.WHEN_ANCESTOR_OF_FOCUSED_COMPONENT);
 
-        String[] items = {
-                "Article",
-                "Collection",
-                "Producer",
-                "Colors",
-                "Pattern type"
-        };
-
         // ? ?????. ?? ?? ???? ???? ?????? ????????? ?????????.
 
         textQuery.addKeyListener(new KeyAdapter() {
@@ -97,27 +88,36 @@ public class TextureDialog extends JDialog {
         });
     }
 
-    private Article prevSelected = null;
+    private Article selected = null;
 
     private void onModelChange(ListSelectionEvent event) {
         // ??????? ?? ??? ????????.
         Article art = (Article) listTexture.getSelectedValue();
-        if (art!=null && prevSelected != art) {
-            System.out.println("Selected: "+art);
+        if (art != null && selected != art) {
+            System.out.println("Selected: " + art);
             onArticleSelected(art);
+        } else {
+            onArticleDeSelected();
         }
-        prevSelected = art;
+        selected = art;
     }
 
     private void onArticleSelected(Article art) {
         Image image = null;
-        String url=art.toURL(WallPaperPlugin.BASE_URL);
+        String url = art.toURL(WallPaperPlugin.BASE_URL);
         try {
             URL url_ = new URL(url);
             image = ImageIO.read(url_);
+            ImageIcon icon = new ImageIcon(image);
+            imageTexture.setIcon(icon);
         } catch (IOException e) {
-            System.err.println("We could not load image from "+url);
+            System.err.println("We could not load image from " + url);
+            return;
         }
+    }
+
+    private void onArticleDeSelected() {
+        // remove preview.
     }
 
     private DefaultListModel<Article> listModel = new DefaultListModel<>();
@@ -271,9 +271,9 @@ public class TextureDialog extends JDialog {
         final JPanel panel3 = new JPanel();
         panel3.setLayout(new com.intellij.uiDesigner.core.GridLayoutManager(1, 1, new Insets(0, 0, 0, 0), -1, -1));
         contentPane.add(panel3, new com.intellij.uiDesigner.core.GridConstraints(1, 6, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_BOTH, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, null, null, null, 0, false));
-        ImageTexture = new JLabel();
-        ImageTexture.setText("");
-        panel3.add(ImageTexture, new com.intellij.uiDesigner.core.GridConstraints(0, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_NONE, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, new Dimension(100, 100), null, 0, false));
+        imageTexture = new JLabel();
+        imageTexture.setText("");
+        panel3.add(imageTexture, new com.intellij.uiDesigner.core.GridConstraints(0, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_NONE, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, new Dimension(100, 100), null, 0, false));
         final JToolBar.Separator toolBar$Separator1 = new JToolBar.Separator();
         contentPane.add(toolBar$Separator1, new com.intellij.uiDesigner.core.GridConstraints(3, 0, 1, 2, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_NORTHWEST, com.intellij.uiDesigner.core.GridConstraints.FILL_NONE, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
         final JLabel label1 = new JLabel();
@@ -288,6 +288,8 @@ public class TextureDialog extends JDialog {
         final JScrollPane scrollPane1 = new JScrollPane();
         contentPane.add(scrollPane1, new com.intellij.uiDesigner.core.GridConstraints(1, 0, 1, 5, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_BOTH, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_WANT_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_WANT_GROW, null, null, null, 0, false));
         listTexture = new JList();
+        final DefaultListModel defaultListModel1 = new DefaultListModel();
+        listTexture.setModel(defaultListModel1);
         scrollPane1.setViewportView(listTexture);
         comboBoxSearch = new JComboBox();
         comboBoxSearch.setEditable(true);
