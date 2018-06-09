@@ -57,4 +57,12 @@ public class Article implements Serializable  {
     public Collection getCollection() {
         return collection;
     }
+
+    public String toString() {
+        String s = name+" ";
+        if (collection.getName()!="default") {
+            s+="/"+collection.getName()+" ";
+        }
+        return s+"/"+collection.getProducer().getName();
+    }
 }

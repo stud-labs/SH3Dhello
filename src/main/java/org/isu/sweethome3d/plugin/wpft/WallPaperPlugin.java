@@ -22,6 +22,8 @@ public class WallPaperPlugin extends com.eteks.sweethome3d.plugin.Plugin {
 
     public static Session session = null;
     public static String articleDir = "/home/eugeneai/projects/SH3Dhello/www";
+    public static final int MAXRESULTS = 20;
+
 
     protected void createDefaultSession()
     {

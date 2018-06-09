@@ -74,8 +74,6 @@ public class TextureDialog extends JDialog {
             }
         });
 
-        listModel.addElement("Hi there!");
-
         listTexture.setModel(listModel);
 
         loadTexturesButton.addActionListener(new ActionListener() {
@@ -86,7 +84,7 @@ public class TextureDialog extends JDialog {
         });
     }
 
-    private DefaultListModel<String> listModel = new DefaultListModel<>();
+    private DefaultListModel<Article> listModel = new DefaultListModel<>();
 
     private void onOK() {
         // add your code here
@@ -105,12 +103,23 @@ public class TextureDialog extends JDialog {
         }
     }
 
-    private void performSearch(String q) {
-        listModel.clear(); // ?????? ??? ???????????.
-        listModel.addElement("Added " + q);
+    private void performSearch(String query) {
+        listModel.clear(); // ?????? ??? ????????.
+        Session s = WallPaperPlugin.session;
+        Query q = s.createQuery("from Article where name LIKE :nameq");
+        q.setParameter("nameq", query + "%");
+        q.setMaxResults(WallPaperPlugin.MAXRESULTS);
+        for (Object obj : q.list()) {
+            Article art = (Article) obj;
+            listModel.addElement(art);
+        }
     }
 
     private void onLoadTextures() {
+        // ???? ?????? ?????? ???????????, ??????????? ???????? ?????? ??????
+        // ?? ???????????.
+        // ?????????? ?????????? ? ????????? ????????????? ??? ????????? ??????.
+
         Session s = WallPaperPlugin.session;
         String dir = WallPaperPlugin.articleDir;
 
@@ -188,7 +197,7 @@ public class TextureDialog extends JDialog {
             }
 
             s.getTransaction().commit();
-            System.out.println("Added "+art.getName()+" in "+col.getName()+" of "+p.getName());
+            System.out.println("Added " + art.getName() + " in " + col.getName() + " of " + p.getName());
         }
     }
 
