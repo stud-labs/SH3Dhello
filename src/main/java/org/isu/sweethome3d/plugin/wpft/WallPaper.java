@@ -1,6 +1,6 @@
 package org.isu.sweethome3d.plugin.wpft;
 
-/** /069TNoHZYG/d+ocvy+rX1Vxq2mx4BTTu7EouFQq3Ts=
+/** gbFRtpBC6BvHoyYlSq6zOZiqRt8ynkj+P8i/TFWfjwo=
  * Created by Katya on 04.06.2018.
  */
 
