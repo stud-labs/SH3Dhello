@@ -3,10 +3,15 @@ package org.isu.sweethome3d.plugin.wpft;
 import org.hibernate.Session;
 import org.hibernate.query.Query;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
+import javax.swing.event.ListSelectionEvent;
+import javax.swing.event.ListSelectionListener;
 import java.awt.*;
 import java.awt.event.*;
 import java.io.File;
+import java.io.IOException;
+import java.net.URL;
 import java.util.Arrays;
 
 import static org.apache.commons.io.FileUtils.listFiles;
@@ -82,6 +87,37 @@ public class TextureDialog extends JDialog {
                 onLoadTextures();
             }
         });
+
+        listTexture.addListSelectionListener(new ListSelectionListener() {
+            @Override
+            public void valueChanged(ListSelectionEvent listSelectionEvent) {
+                onModelChange(listSelectionEvent);
+            }
+
+        });
+    }
+
+    private Article prevSelected = null;
+
+    private void onModelChange(ListSelectionEvent event) {
+        // ??????? ?? ??? ????????.
+        Article art = (Article) listTexture.getSelectedValue();
+        if (art!=null && prevSelected != art) {
+            System.out.println("Selected: "+art);
+            onArticleSelected(art);
+        }
+        prevSelected = art;
+    }
+
+    private void onArticleSelected(Article art) {
+        Image image = null;
+        String url=art.toURL(WallPaperPlugin.BASE_URL);
+        try {
+            URL url_ = new URL(url);
+            image = ImageIO.read(url_);
+        } catch (IOException e) {
+            System.err.println("We could not load image from "+url);
+        }
     }
 
     private DefaultListModel<Article> listModel = new DefaultListModel<>();

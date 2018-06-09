@@ -58,11 +58,24 @@ public class Article implements Serializable  {
         return collection;
     }
 
+    public boolean inCollection() {
+        return ! "default".equals(collection.getName());
+    }
+
     public String toString() {
         String s = name+" ";
-        if (collection.getName()!="default") {
+        if (inCollection()) {
             s+="/"+collection.getName()+" ";
         }
         return s+"/"+collection.getProducer().getName();
     }
+
+    public String toURL(String URL) {
+        URL+="/"+collection.getProducer().getName();
+        if (inCollection()) {
+            URL+="/"+collection.getName();
+        }
+        return URL+"/"+name+".jpg";
+    }
+
 }

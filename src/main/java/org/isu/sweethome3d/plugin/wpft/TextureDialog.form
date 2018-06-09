@@ -95,7 +95,9 @@
         <children>
           <component id="8650a" class="javax.swing.JList" binding="listTexture">
             <constraints/>
-            <properties/>
+            <properties>
+              <model/>
+            </properties>
           </component>
         </children>
       </scrollpane>

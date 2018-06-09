@@ -7,6 +7,8 @@ import org.hibernate.cfg.Configuration;
 
 
 public class WallPaperPlugin extends com.eteks.sweethome3d.plugin.Plugin {
+    public static final String BASE_URL = "http://127.0.0.1:8080";
+
     public WallPaperPlugin() {
         super();
         if (session == null) createDefaultSession();
