@@ -15,14 +15,25 @@ public class Collection implements Serializable {
 
     private String name;
 
-    @Temporal(TemporalType.TIMESTAMP)
-
     public Long getId() { return id; }
 
     public void setId(Long id) { this.id = id; }
 
-    public void setName(String name) { this.name = name; }
-
     @ManyToOne
     private Producer producer;
+
+    public Producer getProducer() {
+        return producer;
+    }
+
+    public void setProducer(Producer producer) {
+        this.producer = producer;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) { this.name = name; }
+
 }

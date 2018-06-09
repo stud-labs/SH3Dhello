@@ -15,11 +15,13 @@ public class Article implements Serializable  {
         @GeneratedValue(strategy = GenerationType.IDENTITY)
         private Long id;
 
-        private String Colors;
+        private String Colors; // ???? ???? ????????. ?????? ??? ?? ?????.
 
         private String PatternType;
 
-        @Temporal(TemporalType.TIMESTAMP)
+        private String name;
+
+        // @Temporal(TemporalType.TIMESTAMP)
 
         public Long getId () {
         return id;
@@ -39,4 +41,20 @@ public class Article implements Serializable  {
 
     @ManyToOne
     private Collection collection;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setCollection(Collection col) {
+        collection = col;
+    }
+
+    public Collection getCollection() {
+        return collection;
+    }
 }
