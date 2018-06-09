@@ -9,8 +9,6 @@ package org.isu.sweethome3d.plugin.wpft;
         import org.hibernate.SessionFactory;
         import org.hibernate.cfg.Configuration;
 
-        import org.isu.sweethome3d.plugin.wpft.WallPaper;
-
 /**
  * Unit test for simple App.
  */
