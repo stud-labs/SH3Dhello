@@ -136,7 +136,9 @@ public class TextureDialog extends JDialog {
     private DefaultListModel<Article> listModel = new DefaultListModel<>();
 
     private void onOK() {
-        // add your code here
+
+
+
         dispose();
     }
 

@@ -59,14 +59,15 @@ public class WallParamsDialog extends JDialog {
     }
 
     private void onOK() {
-        // add your code here
         context.height = Float.parseFloat(textHeight.getText());
+        context.thickness = Float.parseFloat(textThick.getText());
         dispose();
     }
 
     private void onCancel() {
         // add your code here if necessary
         context.height = null;
+        context.thickness = null;
         dispose();
     }
 
