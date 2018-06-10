@@ -23,16 +23,16 @@ public class WallAction extends PluginAction {
 
     public WallParamsDialog dialog;
     public Float height;
-
-    public void inputDialog()
-    {
-
-        dialog = WallParamsDialog.execute(this);
-    }
+    public Float thickness;
 
     @Override
     public void execute() {
-        inputDialog();
+        dialog = WallParamsDialog.execute(this);
+        java.util.Collection<Wall> walls = home.getWalls();
+        for (Wall w : walls) {
+            w.setHeight(new Float(height));
+            w.setThickness(new Float(thickness));
+        }
     }
 }
 
