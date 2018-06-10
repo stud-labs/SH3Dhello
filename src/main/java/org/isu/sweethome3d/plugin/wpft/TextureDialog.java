@@ -99,7 +99,7 @@ public class TextureDialog extends JDialog {
             System.out.println("Selected: " + art);
             onArticleSelected(art);
         }
-        if (art==null) {
+        if (art == null) {
             onArticleDeSelected();
         }
         selected = art;
@@ -316,7 +316,7 @@ public class TextureDialog extends JDialog {
         buttonOK.setText("OK");
         contentPane.add(buttonOK, new com.intellij.uiDesigner.core.GridConstraints(4, 1, 1, 4, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
         textQuery = new JTextField();
-        textQuery.setText("1789");
+        textQuery.setText("");
         contentPane.add(textQuery, new com.intellij.uiDesigner.core.GridConstraints(3, 2, 1, 3, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_WEST, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_WANT_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, new Dimension(150, -1), null, 0, false));
         loadTexturesButton = new JButton();
         loadTexturesButton.setText("Load textures");

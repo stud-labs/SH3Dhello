@@ -131,7 +131,7 @@
           </grid>
         </constraints>
         <properties>
-          <text value="1789"/>
+          <text value=""/>
         </properties>
       </component>
       <component id="4b149" class="javax.swing.JButton" binding="loadTexturesButton" default-binding="true">
