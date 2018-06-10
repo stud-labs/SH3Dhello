@@ -32,6 +32,11 @@ public class WallAction extends PluginAction {
 
     @Override
     public void execute() {
+        dialog = WallParamsDialog.execute(this);
+        java.util.Collection<Wall> walls = home.getWalls();
+        for (Wall w : walls) {
+            w.setHeight(new Float(290.0));
+        }
     }
 }
 

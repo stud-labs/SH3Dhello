@@ -96,8 +96,14 @@
           <component id="8650a" class="javax.swing.JList" binding="listTexture">
             <constraints/>
             <properties>
+              <layoutOrientation value="0"/>
               <model/>
+              <selectionMode value="2"/>
+              <toolTipText value=""/>
             </properties>
+            <clientProperties>
+              <List.isFileList class="java.lang.Boolean" value="false"/>
+            </clientProperties>
           </component>
         </children>
       </scrollpane>

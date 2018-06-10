@@ -14,6 +14,8 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
+import java.awt.Dimension;
+import java.awt.image.BufferedImage;
 
 import static org.apache.commons.io.FileUtils.listFiles;
 
@@ -109,8 +111,8 @@ public class TextureDialog extends JDialog {
         String url = art.toURL(WallPaperPlugin.BASE_URL);
         try {
             URL url_ = new URL(url);
-            image = ImageIO.read(url_);
-            iconImage = Scalr.resize(image, 200);
+            BufferedImage image = ImageIO.read(url_);
+            BufferedImage iconImage = Scalr.resize(image, 100, 100);
             ImageIcon icon = new ImageIcon(iconImage);
             imageTexture.setIcon(icon);
         } catch (IOException e) {
@@ -176,14 +178,14 @@ public class TextureDialog extends JDialog {
 
         java.util.Collection<File> list = listFiles(root, exts, true);
         String sep = File.separator;
-        String sepRegexp = sep.replace("\\","\\\\");
+        String sepRegexp = sep.replace("\\", "\\\\");
         for (File f : list) {
             String dirsep = dir + sep;
             String path = f.getPath();
-            System.out.println("Orig path:\n" + path+"\n"+dirsep);
-            path=path.replace(dirsep, "");
+            System.out.println("Orig path:\n" + path + "\n" + dirsep);
+            path = path.replace(dirsep, "");
             String name = f.getName();
-            String sepname=sep + name;
+            String sepname = sep + name;
             path = path.replace(sepname, "");
             System.out.println("path:" + path);
 
@@ -258,7 +260,7 @@ public class TextureDialog extends JDialog {
         TextureDialog dialog = new TextureDialog();
         dialog.pack();
         dialog.setVisible(true);
-        dialog.setSize(600, 600);
+        //dialog.setSize(600, 600);
     }
 
     private void createUIComponents() {
@@ -305,8 +307,12 @@ public class TextureDialog extends JDialog {
         final JScrollPane scrollPane1 = new JScrollPane();
         contentPane.add(scrollPane1, new com.intellij.uiDesigner.core.GridConstraints(1, 0, 1, 5, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_BOTH, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_WANT_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_WANT_GROW, null, null, null, 0, false));
         listTexture = new JList();
+        listTexture.setLayoutOrientation(0);
         final DefaultListModel defaultListModel1 = new DefaultListModel();
         listTexture.setModel(defaultListModel1);
+        listTexture.setSelectionMode(2);
+        listTexture.setToolTipText("");
+        listTexture.putClientProperty("List.isFileList", Boolean.FALSE);
         scrollPane1.setViewportView(listTexture);
         comboBoxSearch = new JComboBox();
         comboBoxSearch.setEditable(true);
