@@ -32,6 +32,7 @@ public class WallAction extends PluginAction {
 
     @Override
     public void execute() {
+        inputDialog();
     }
 }
 
