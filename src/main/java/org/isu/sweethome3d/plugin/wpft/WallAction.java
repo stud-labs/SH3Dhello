@@ -28,12 +28,6 @@ public class WallAction extends PluginAction {
     public Float width;
 
 
-    public void inputDialog()
-    {
-
-        dialog = WallParamsDialog.execute(this);
-    }
-
     @Override
     public void execute() {
         dialog = WallParamsDialog.execute(this);

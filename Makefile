@@ -1,7 +1,10 @@
-.PHONY: run pack tests
+.PHONY: run pack tests sh3d env
 
-run: pack
-	sweethome3d ~/wall.sh3d
+
+sh3d:
+	sweethome3d /j3d.version=1.5.2 $(PWD)/data/wall.sh3d
+
+run: pack sh3d
 
 pack:
 	# mvn package -Dmaven.test.skip=true
@@ -9,3 +12,6 @@ pack:
 
 tests:
 	mvn package
+
+env:
+	echo $(PWD)

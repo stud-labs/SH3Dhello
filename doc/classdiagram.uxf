@@ -51,17 +51,14 @@ m2=1..n</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>310</x>
-      <y>450</y>
+      <y>370</y>
       <w>210</w>
       <h>100</h>
     </coordinates>
     <panel_attributes>WallPaperPlugin
 --
-#createDefaultSession() Надо?
-+WallPaperPlugin: ???
-+Session: ??? Надо?
 --
-PluginAction[] getActions() - ???</panel_attributes>
++PluginAction[] getActions()</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -70,14 +67,15 @@ PluginAction[] getActions() - ???</panel_attributes>
       <x>600</x>
       <y>350</y>
       <w>210</w>
-      <h>80</h>
+      <h>110</h>
     </coordinates>
     <panel_attributes>WallPaperAction
 --
 -home: Home
-+WallPaperAction: home
+. . . .
 --
-+execute()</panel_attributes>
++execute()
++applyArticleToSelection(A)</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -97,26 +95,26 @@ m1=0..n
     <id>UMLClass</id>
     <coordinates>
       <x>600</x>
-      <y>540</y>
+      <y>550</y>
       <w>210</w>
       <h>50</h>
     </coordinates>
     <panel_attributes>_a WPA: WallPaperAction_
 --
-???</panel_attributes>
+</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>680</x>
-      <y>420</y>
-      <w>110</w>
-      <h>140</h>
+      <y>450</y>
+      <w>120</w>
+      <h>120</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
 &lt;&lt;instanceOf&gt;&gt;</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;120.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
@@ -128,7 +126,7 @@ m1=0..n
     </coordinates>
     <panel_attributes>_a Home: Home_
 --
-???</panel_attributes>
+</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -148,7 +146,7 @@ m1=1</panel_attributes>
     <coordinates>
       <x>1180</x>
       <y>260</y>
-      <w>110</w>
+      <w>120</w>
       <h>350</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
@@ -163,7 +161,7 @@ m1=1</panel_attributes>
       <w>210</w>
       <h>50</h>
     </coordinates>
-    <panel_attributes>_a WPA: WallPaperPlagin_
+    <panel_attributes>_WPPs[2]: WallPaperPlugin_
 --
 </panel_attributes>
     <additional_attributes/>
@@ -172,25 +170,25 @@ m1=1</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>390</x>
-      <y>540</y>
-      <w>110</w>
-      <h>70</h>
+      <y>460</y>
+      <w>120</w>
+      <h>150</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
 &lt;&lt;instanceOf&gt;&gt;</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;130.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>510</x>
-      <y>560</y>
+      <y>570</y>
       <w>110</w>
-      <h>60</h>
+      <h>50</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 m1=1</panel_attributes>
-    <additional_attributes>90.0;10.0;50.0;10.0;50.0;40.0;10.0;40.0</additional_attributes>
+    <additional_attributes>90.0;10.0;50.0;10.0;50.0;30.0;10.0;30.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
@@ -200,9 +198,9 @@ m1=1</panel_attributes>
       <w>210</w>
       <h>50</h>
     </coordinates>
-    <panel_attributes>_a WPA: WallAction_
+    <panel_attributes>_a WA: WallAction_
 --
-???</panel_attributes>
+</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -228,10 +226,9 @@ m1=1</panel_attributes>
     <panel_attributes>WallAction
 --
 -home: Home
-+WallAction: home
 +fullName: String
-+WallParamsDialog:???
-+Float:???
++height:Float
+. . . . 
 --</panel_attributes>
     <additional_attributes/>
   </element>
@@ -240,7 +237,7 @@ m1=1</panel_attributes>
     <coordinates>
       <x>910</x>
       <y>450</y>
-      <w>110</w>
+      <w>120</w>
       <h>220</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
@@ -248,30 +245,16 @@ m1=1</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;200.0</additional_attributes>
   </element>
   <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>510</x>
-      <y>260</y>
-      <w>660</w>
-      <h>260</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-
-m1=1</panel_attributes>
-    <additional_attributes>640.0;10.0;640.0;240.0;10.0;240.0</additional_attributes>
-  </element>
-  <element>
     <id>UMLClass</id>
     <coordinates>
       <x>310</x>
-      <y>280</y>
+      <y>240</y>
       <w>210</w>
       <h>100</h>
     </coordinates>
-    <panel_attributes>???
+    <panel_attributes>SH3D
 --
--???
-+???
-+???
+. . . . 
 --</panel_attributes>
     <additional_attributes/>
   </element>
@@ -279,26 +262,26 @@ m1=1</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>460</x>
-      <y>370</y>
+      <y>330</y>
       <w>30</w>
-      <h>100</h>
+      <h>60</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 m1=1</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;40.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>510</x>
-      <y>330</y>
+      <y>290</y>
       <w>110</w>
-      <h>110</h>
+      <h>150</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 m1=*
 execute</panel_attributes>
-    <additional_attributes>90.0;80.0;40.0;80.0;40.0;10.0;10.0;10.0</additional_attributes>
+    <additional_attributes>90.0;120.0;40.0;120.0;40.0;10.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
@@ -384,7 +367,7 @@ Collection
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1390</x>
+      <x>1380</x>
       <y>240</y>
       <w>50</w>
       <h>130</h>
@@ -436,21 +419,10 @@ m2=1</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>960</x>
-      <y>260</y>
-      <w>170</w>
-      <h>70</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>150.0;10.0;150.0;50.0;10.0;50.0</additional_attributes>
-  </element>
-  <element>
     <id>UMLClass</id>
     <coordinates>
       <x>430</x>
-      <y>170</y>
+      <y>130</y>
       <w>210</w>
       <h>100</h>
     </coordinates>
@@ -464,68 +436,164 @@ m2=1</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>610</x>
-      <y>260</y>
+      <y>220</y>
       <w>30</w>
-      <h>110</h>
+      <h>150</h>
     </coordinates>
-    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=*
+m2=*</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;130.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
       <x>0</x>
-      <y>450</y>
+      <y>140</y>
       <w>210</w>
-      <h>100</h>
+      <h>240</h>
     </coordinates>
-    <panel_attributes>PluginAction
+    <panel_attributes>TextureDialog()
 --
-
+-selected:Article
+-listMode:DefaultListModel&lt;Article&gt;
+-performSearch: String
+--
+-onKey: KeyEvent
+-onModelChange: ListSelectionEvent
+-onArticleSelected: Article
+-onArticleDeSelected()
+-onOK()
+-onCancel()
+-onLoadTextures()
+-createUIComponents()
++TextureDialog()
++execute()
 --</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1290</x>
+      <y>510</y>
+      <w>210</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>_a WallParamsDialog_
+--
+</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>200</x>
-      <y>480</y>
+      <y>280</y>
       <w>130</w>
       <h>30</h>
     </coordinates>
-    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;110.0;10.0</additional_attributes>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>110.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1080</x>
+      <y>400</y>
+      <w>230</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;10.0;40.0;10.0;40.0;140.0;210.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1030</x>
+      <y>450</y>
+      <w>30</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+</panel_attributes>
+    <additional_attributes>10.0;140.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>760</x>
+      <y>450</y>
+      <w>300</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+</panel_attributes>
+    <additional_attributes>280.0;140.0;280.0;60.0;10.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>610</x>
+      <y>220</y>
+      <w>380</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=*
+m2=*</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;110.0;360.0;110.0;360.0;130.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>0</x>
-      <y>280</y>
+      <x>1290</x>
+      <y>560</y>
       <w>210</w>
-      <h>100</h>
+      <h>40</h>
     </coordinates>
-    <panel_attributes>TextureDialog() Надо?
+    <panel_attributes>_a WallDialog_
 --
--???
-+???
-+???
---</panel_attributes>
+</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>800</x>
+      <y>400</y>
+      <w>510</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;10.0;50.0;10.0;50.0;170.0;490.0;170.0</additional_attributes>
+  </element>
+  <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>0</x>
-      <y>150</y>
-      <w>210</w>
-      <h>100</h>
+      <x>300</x>
+      <y>490</y>
+      <w>1210</w>
+      <h>250</h>
     </coordinates>
-    <panel_attributes>WallParamsDialog() Надо?
---
--???
-+???
-+???
---</panel_attributes>
+    <panel_attributes>bg=green
+layer=0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Экземпляры классов
+</panel_attributes>
     <additional_attributes/>
   </element>
 </diagram>
