@@ -176,18 +176,24 @@ public class TextureDialog extends JDialog {
 
         java.util.Collection<File> list = listFiles(root, exts, true);
         String sep = File.separator;
+        String sepRegexp = sep.replace("\\","\\\\");
         for (File f : list) {
-            String path = f.getPath().replace(dir + sep, "");
+            String dirsep = dir + sep;
+            String path = f.getPath();
+            System.out.println("Orig path:\n" + path+"\n"+dirsep);
+            path=path.replace(dirsep, "");
             String name = f.getName();
-            path = path.replace(sep + name, "");
+            String sepname=sep + name;
+            path = path.replace(sepname, "");
             System.out.println("path:" + path);
 
             String article = name.replace(".jpg", "");
             System.out.println("article:" + article);
 
-            String[] parts = path.split(sep); // ....
+            String[] parts = path.split(sepRegexp); // ....
             String producer = parts[0];
-            String collection = "default";
+            String collection = "default"; //???????? ????????? ??-?????????
+            // ?????? ??? ????????????? ??? ?????????? ????????.
 
             if (parts.length == 2) {
                 collection = parts[1];
