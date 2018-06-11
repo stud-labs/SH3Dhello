@@ -24,11 +24,34 @@ public class WallAction extends PluginAction {
     public WallParamsDialog dialog;
     public Float height;
     public Float thickness;
+    public Float width;
+
 
     @Override
     public void execute() {
         dialog = WallParamsDialog.execute(this);
         java.util.Collection<Wall> walls = home.getWalls();
+        java.util.List<Selectable> wS = home.getSelectedItems();
+
+        Wall wXS = null;
+        wXS.getXStart();
+        //Wall wYS = null;
+        //wYS.getYStart();
+
+        Wall wXE = null;
+        wXE.getXEnd();
+        //Wall wYE = null;
+        //wYE.getYEnd();
+
+       /* Wall wAS = null;
+        wAS.getWallAtStart();
+
+        Wall wAE = null;
+        wAE.getWallAtEnd();*/
+
+        Float AtEnd = null;
+        AtEnd = new Float(String.valueOf(wXS)) + width;
+
         for (Wall w : walls) {
             if (height != null) w.setHeight(new Float(height));
             if (thickness != null) w.setThickness(new Float(thickness));
