@@ -38,9 +38,10 @@ public class WallAction extends PluginAction {
         //java.util.List<Wall> wS = home.getWallsSubList(java.util.List<items extends Selectable> wS);
 
 
+        /*
         Wall wXS = null;
 
-        If (){
+        If (false){
             wXS.getXStart();
         }// Из-за этого не работает. Исправляй.
 
@@ -52,18 +53,18 @@ public class WallAction extends PluginAction {
         //Wall wYE = null;
         //wYE.getYEnd();
 
-       /* Wall wAS = null;
+        Wall wAS = null;
         wAS.getWallAtStart();
         Wall wAE = null;
-        wAE.getWallAtEnd();*/
+        wAE.getWallAtEnd();
 
         Float atEnd = null;
-        if (width!=null) atEnd = new Float(Float.parseFloat(String.valueOf(wXS))) + width;
-
+        if (width!=null) atEnd = parseFloat(String.valueOf(wXS)) + width;
+        */
         for (Wall w : walls) {
             if (height != null) w.setHeight(height);
             if (thickness != null) w.setThickness(thickness);
-            if (atEnd != null) ;
+            // if (atEnd != null) ;
         }
     }
 }
