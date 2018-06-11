@@ -24,10 +24,10 @@ public class WallPaperPlugin extends com.eteks.sweethome3d.plugin.Plugin {
 
     public static Session session = null;
 
-    // public static String articleDir = "/home/eugeneai/projects/code/SweetHome3D-plugin/www";
+    public static String articleDir = "/home/eugeneai/projects/code/SweetHome3D-plugin/www";
 
-    public static String articleDir = "C:\\Users\\Katya\\IdeaProjects\\hello\\" +
-            "www";
+    //public static String articleDir = "C:\\Users\\Katya\\IdeaProjects\\hello\\" +
+    //        "www";
 
     public static final int MAXRESULTS = 20;
 
