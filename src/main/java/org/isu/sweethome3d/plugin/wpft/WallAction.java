@@ -1,6 +1,7 @@
 package org.isu.sweethome3d.plugin.wpft;
 
 import com.eteks.sweethome3d.model.Home;
+import com.eteks.sweethome3d.model.Selectable;
 import com.eteks.sweethome3d.model.Wall;
 import com.eteks.sweethome3d.plugin.PluginAction;
 
@@ -49,12 +50,13 @@ public class WallAction extends PluginAction {
         Wall wAE = null;
         wAE.getWallAtEnd();*/
 
-        Float AtEnd = null;
-        AtEnd = new Float(String.valueOf(wXS)) + width;
+        Float atEnd = null;
+        if (width!=null) atEnd = new Float(String.valueOf(wXS)) + width;
 
         for (Wall w : walls) {
             if (height != null) w.setHeight(new Float(height));
             if (thickness != null) w.setThickness(new Float(thickness));
+            if (atEnd != null) ; 
         }
     }
 }
