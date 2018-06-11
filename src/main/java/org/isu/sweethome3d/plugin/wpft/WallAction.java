@@ -8,6 +8,7 @@ import com.eteks.sweethome3d.plugin.PluginAction;
 import javax.swing.*;
 
 /* Внутренний класс WallPaperPlugin*/
+/* Внутренний класс WallPaperPlugin*/
 public class WallAction extends PluginAction {
     private Home home;
     public WallAction(Home home) {
@@ -46,20 +47,16 @@ public class WallAction extends PluginAction {
 
        /* Wall wAS = null;
         wAS.getWallAtStart();
-
         Wall wAE = null;
         wAE.getWallAtEnd();*/
 
-        Float AtEnd = null;
-        AtEnd = new Float(String.valueOf(wXS)) + width;
+        Float atEnd = null;
+        if (width!=null) atEnd = new Float(String.valueOf(wXS)) + width;
 
         for (Wall w : walls) {
-            if (w == wS){
-                w.setHeight(new Float(height));
-                w.setThickness(new Float(thickness));
-                w.setXEnd(new Float(AtEnd));
-            }
+            if (height != null) w.setHeight(new Float(height));
+            if (thickness != null) w.setThickness(new Float(thickness));
+            if (atEnd != null) ;
         }
     }
 }
-

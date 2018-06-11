@@ -59,10 +59,20 @@ public class WallParamsDialog extends JDialog {
     }
 
     private void onOK() {
-        context.height = Float.parseFloat(textHeight.getText());
-        context.thickness = Float.parseFloat(textThick.getText());
-        context.width = Float.parseFloat(textWidth.getText());
+        context.height = parseFloat(textHeight.getText());
+        context.thickness = parseFloat(textThick.getText());
+        context.width = parseFloat(textWidth.getText());
         dispose();
+    }
+
+    protected Float parseFloat(String s) {
+        Float number;
+        try {
+            number = Float.parseFloat(s);
+        } catch (NumberFormatException e) {
+            number = null;
+        }
+        return number;
     }
 
     private void onCancel() {
