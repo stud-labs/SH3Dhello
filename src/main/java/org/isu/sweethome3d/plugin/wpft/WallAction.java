@@ -1,8 +1,8 @@
 package org.isu.sweethome3d.plugin.wpft;
 
 import com.eteks.sweethome3d.model.Home;
-import com.eteks.sweethome3d.model.Wall;
 import com.eteks.sweethome3d.model.Selectable;
+import com.eteks.sweethome3d.model.Wall;
 import com.eteks.sweethome3d.plugin.PluginAction;
 
 import javax.swing.*;
