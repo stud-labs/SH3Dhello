@@ -56,7 +56,7 @@ public class WallAction extends PluginAction {
         for (Wall w : walls) {
             if (height != null) w.setHeight(new Float(height));
             if (thickness != null) w.setThickness(new Float(thickness));
-            if (atEnd != null) ; 
+            if (atEnd != null) ;
         }
     }
 }

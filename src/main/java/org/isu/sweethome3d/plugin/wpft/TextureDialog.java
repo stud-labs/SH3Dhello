@@ -136,8 +136,9 @@ public class TextureDialog extends JDialog {
     private DefaultListModel<Article> listModel = new DefaultListModel<>();
 
     private void onOK() {
-
-
+        context.article = selected;
+        context.textQuery = textQuery.getText().trim();
+        context.texture = wallImage;
 
         dispose();
     }
@@ -148,8 +149,12 @@ public class TextureDialog extends JDialog {
     }
 
     private void onKey(KeyEvent e) {
-        String query = textQuery.getText().trim(); // Sting= ????. remove spaces
-        if (query.length() > 3) {
+        updateList();
+    }
+
+    private void updateList() {
+        String query = textQuery.getText().trim();
+        if (query.length() > 2) {
             performSearch(query);
         }
     }
@@ -258,11 +263,31 @@ public class TextureDialog extends JDialog {
         }
     }
 
-    public static void execute() {
+    protected WallPaperAction context = null;
+
+    public void setContext(WallPaperAction context) {
+        this.context = context;
+        update();
+    }
+
+    public WallPaperAction getContext() {
+        return context;
+    }
+
+    public static void execute(WallPaperAction context) {
         TextureDialog dialog = new TextureDialog();
         dialog.pack();
+        dialog.setContext(context);
         dialog.setVisible(true);
         //dialog.setSize(600, 600);
+    }
+
+    protected void update() {
+        if(context.textQuery!=null) {
+            textQuery.setText(context.textQuery);
+            updateList();
+            onArticleDeSelected();
+        }
     }
 
     private void createUIComponents() {
