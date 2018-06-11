@@ -115,6 +115,7 @@ public class TextureDialog extends JDialog {
             BufferedImage iconImage = Scalr.resize(image, 100, 100);
             ImageIcon icon = new ImageIcon(iconImage);
             imageTexture.setIcon(icon);
+            wallImage = image; // may be convert it somehow.
         } catch (IOException e) {
             System.err.println("We could not load image from " + url);
             onArticleDeSelected();
