@@ -1,4 +1,4 @@
-package org.isu.sweethome3d.plugin.wpft;
+package eteks.api;
 
 /**Контент менеджер.
  * http://www.sweethome3d.com/javadoc/com/eteks/sweethome3d/viewcontroller/ContentManager.html

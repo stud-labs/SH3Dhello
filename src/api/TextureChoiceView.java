@@ -1,4 +1,4 @@
-package org.isu.sweethome3d.plugin.wpft;
+package eteks.api;
 
 /*A view that edits the texture of its controller.
 http://www.sweethome3d.com/javadoc/com/eteks/sweethome3d/viewcontroller/TextureChoiceView.html*/

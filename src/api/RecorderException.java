@@ -1,4 +1,4 @@
-package org.isu.sweethome3d.plugin.wpft;
+package eteks.api;
 //ПОЧЕМУ ИКОНКА МОЛНИЯ??
 
 /**Исключение, вызванное методами доступа к данным в слое ввода-вывода.

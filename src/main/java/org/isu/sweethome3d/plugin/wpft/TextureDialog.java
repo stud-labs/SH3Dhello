@@ -15,7 +15,6 @@ import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.awt.Dimension;
-import java.awt.image.BufferedImage;
 
 import static org.apache.commons.io.FileUtils.listFiles;
 
@@ -139,7 +138,7 @@ public class TextureDialog extends JDialog {
     private void onOK() {
         context.article = selected;
         context.textQuery = textQuery.getText().trim();
-        context.texture = wallImage;
+        context.textureImage = wallImage;
 
         dispose();
     }

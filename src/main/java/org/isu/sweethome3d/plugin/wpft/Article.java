@@ -1,7 +1,6 @@
 package org.isu.sweethome3d.plugin.wpft;
 
 import javax.persistence.*;
-import java.awt.color.ColorSpace;
 import java.io.Serializable;
 
 /**

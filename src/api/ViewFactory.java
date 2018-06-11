@@ -1,4 +1,8 @@
-package org.isu.sweethome3d.plugin.wpft;
+package eteks.api;
+
+import eteks.api.TextureChoiceController;
+import eteks.api.TextureChoiceView;
+import eteks.api.UserPreferences;
 
 /**Фабрика, которая определяет, как создавать представления, отображаемые в Sweet Home 3D.
  *http://www.sweethome3d.com/javadoc/com/eteks/sweethome3d/viewcontroller/ViewFactory.html

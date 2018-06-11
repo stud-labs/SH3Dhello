@@ -1,4 +1,4 @@
-package org.isu.sweethome3d.plugin.wpft;
+package eteks.api;
 
 /*Содержимое считывается из URL-адреса без зависимости от другого содержимого, если этот URL-адрес является JAR-записью.
 * http://www.sweethome3d.com/javadoc/com/eteks/sweethome3d/tools/SimpleURLContent.html*/

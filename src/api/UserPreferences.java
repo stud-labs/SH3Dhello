@@ -1,4 +1,8 @@
-package org.isu.sweethome3d.plugin.wpft;
+package eteks.api;
+
+import eteks.api.Library;
+import eteks.api.RecorderException;
+import eteks.api.TextureImage;
 
 /**Пользовательские настройки.
  *http://www.sweethome3d.com/javadoc/com/eteks/sweethome3d/model/UserPreferences.html#UserPreferences--

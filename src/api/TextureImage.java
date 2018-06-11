@@ -1,4 +1,6 @@
-package org.isu.sweethome3d.plugin.wpft;
+package eteks.api;
+
+import eteks.api.Content;
 
 /*Изображение используется как текстура.
 http://www.sweethome3d.com/javadoc/com/eteks/sweethome3d/model/TextureImage.html*/

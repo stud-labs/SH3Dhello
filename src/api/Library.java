@@ -1,4 +1,4 @@
-package org.isu.sweethome3d.plugin.wpft;
+package eteks.api;
 
 /**Библиотека, способная предоставить дополнительные возможности Sweet Home 3D.
  *http://www.sweethome3d.com/javadoc/com/eteks/sweethome3d/model/Library.html

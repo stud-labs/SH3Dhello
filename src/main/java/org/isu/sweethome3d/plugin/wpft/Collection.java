@@ -1,5 +1,7 @@
 package org.isu.sweethome3d.plugin.wpft;
 
+import org.isu.sweethome3d.plugin.wpft.Producer;
+
 import javax.persistence.*;
 import java.io.Serializable;
 

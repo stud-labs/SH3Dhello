@@ -10,12 +10,6 @@
     <packaging>jar</packaging>
     <name>A Sweet Home 3D Wall Paper and Floor Tiles Plugin</name>
 
-    <parent>
-        <groupId>com.massisframework</groupId>
-        <artifactId>sweethome3d-plugins</artifactId>
-        <version>0.0.7</version>
-    </parent>
-
     <build>
         <plugins>
             <plugin>
@@ -54,6 +48,21 @@
 
 
     <dependencies>
+        <!-- https://mvnrepository.com/artifact/com.massisframework/sweethome3d -->
+        <dependency>
+            <groupId>com.massisframework</groupId>
+            <artifactId>sweethome3d</artifactId>
+            <version>5.7</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/SweetHome3D-5.7.jar</systemPath>
+        </dependency>
+        <!--
+        <dependency>
+            <groupId>com.massisframework</groupId>
+            <artifactId>sweethome3d</artifactId>
+            <version>5.4.0.4</version>
+        </dependency>
+        -->
         <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-entitymanager -->
         <dependency>
             <groupId>org.hibernate</groupId>

@@ -1,4 +1,6 @@
-package org.isu.sweethome3d.plugin.wpft;
+package eteks.api;
+
+import eteks.api.Content;
 
 import java.io.IOException;
 import java.io.InputStream;
