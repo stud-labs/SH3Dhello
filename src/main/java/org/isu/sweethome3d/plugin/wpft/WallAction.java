@@ -33,10 +33,17 @@ public class WallAction extends PluginAction {
     public void execute() {
         dialog = WallParamsDialog.execute(this);
         java.util.Collection<Wall> walls = home.getWalls();
-        java.util.List<Selectable> wS = home.getSelectedItems();
+        java.util.List<Selectable> items = home.getSelectedItems();
+        //java.util.List<Wall> w = null;
+        //java.util.List<Wall> wS = home.getWallsSubList(java.util.List<items extends Selectable> wS);
+
 
         Wall wXS = null;
-        wXS.getXStart();
+
+        If (){
+            wXS.getXStart();
+        }// Из-за этого не работает. Исправляй.
+
         //Wall wYS = null;
         //wYS.getYStart();
 
@@ -51,7 +58,7 @@ public class WallAction extends PluginAction {
         wAE.getWallAtEnd();*/
 
         Float atEnd = null;
-        if (width!=null) atEnd = new Float(String.valueOf(wXS)) + width;
+        if (width!=null) atEnd = new Float(Float.parseFloat(String.valueOf(wXS))) + width;
 
         for (Wall w : walls) {
             if (height != null) w.setHeight(height);
