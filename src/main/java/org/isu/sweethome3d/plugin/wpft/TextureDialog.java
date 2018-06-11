@@ -283,7 +283,7 @@ public class TextureDialog extends JDialog {
     }
 
     protected void update() {
-        if(context.textQuery!=null) {
+        if (context.textQuery != null) {
             textQuery.setText(context.textQuery);
             updateList();
             onArticleDeSelected();
