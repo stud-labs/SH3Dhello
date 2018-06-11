@@ -30,8 +30,8 @@ public class WallAction extends PluginAction {
         dialog = WallParamsDialog.execute(this);
         java.util.Collection<Wall> walls = home.getWalls();
         for (Wall w : walls) {
-            w.setHeight(new Float(height));
-            w.setThickness(new Float(thickness));
+            if (height != null) w.setHeight(new Float(height));
+            if (thickness != null) w.setThickness(new Float(thickness));
         }
     }
 }
